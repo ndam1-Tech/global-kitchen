@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.use('/recipes', recipeRoutes);
 
-app.use((err, req, res, next) => {
+app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   res.status(500).json({ message: err.message });
 });
 
